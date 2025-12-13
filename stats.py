@@ -13,3 +13,17 @@ def character_count(text):
             character_dict[i] = 1
     return character_dict
 
+def sort_on(character_dict):
+    return character_dict["nums"]
+
+def sorting(character_dict):
+    sorted_characters = []
+    for i in character_dict:
+        if i.isalpha():
+            temp_dict = {"char": i, "nums": character_dict[i]}
+            sorted_characters.append(temp_dict)
+    sorted_characters.sort(reverse=True, key=sort_on)
+
+    return sorted_characters
+
+
